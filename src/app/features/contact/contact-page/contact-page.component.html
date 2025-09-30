@@ -1,1 +1,43 @@
-<p>contact-page works!</p>
+<div class="container">
+  <h1>Entre em Contato</h1>
+  <p>Tem uma ideia ou um projeto em mente? Adoraríamos ouvir sobre ele.</p>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Nome Completo</mat-label>
+      <input matInput formControlName="name" placeholder="Seu nome">
+      @if (submitted && contactForm.get('name')?.invalid) {
+        <mat-error>O nome é obrigatório.</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>E-mail</mat-label>
+      <input matInput formControlName="email" placeholder="seu@email.com">
+       @if (submitted && contactForm.get('email')?.hasError('required')) {
+        <mat-error>O e-mail é obrigatório.</mat-error>
+      }
+       @if (submitted && contactForm.get('email')?.hasError('email')) {
+        <mat-error>Por favor, insira um e-mail válido.</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Assunto</mat-label>
+      <input matInput formControlName="subject" placeholder="Assunto da mensagem">
+       @if (submitted && contactForm.get('subject')?.invalid) {
+        <mat-error>O assunto é obrigatório.</mat-error>
+      }
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Sua Mensagem</mat-label>
+      <textarea matInput formControlName="message" placeholder="Descreva seu projeto ou dúvida..." rows="5"></textarea>
+       @if (submitted && contactForm.get('message')?.invalid) {
+        <mat-error>A mensagem precisa ter no mínimo 10 caracteres.</mat-error>
+      }
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" type="submit">Enviar Mensagem</button>
+  </form>
+</div>

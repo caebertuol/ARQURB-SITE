@@ -1,0 +1,35 @@
+.footer-toolbar {
+  padding: 0 2rem;
+  // Em telas menores, os itens ficam um embaixo do outro
+  flex-direction: column;
+  height: auto;
+  min-height: 64px;
+  gap: 1rem; // Adicione um gap para espaçamento entre os itens
+
+  // Em telas maiores, os itens ficam lado a lado
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-content {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white; // Garante que o texto seja branco para melhor contraste
+}
+
+.social-icons {
+  display: flex; // Garante que os ícones fiquem um ao lado do outro
+  gap: 0.5rem; // Espaçamento entre os ícones
+}
+
+.social-icon {
+  width: 28px; // Aumentei um pouco o tamanho para ficarem mais visíveis
+  height: 28px;
+  // Se seu SVG for preto, este filtro o deixará branco
+  filter: invert(1);
+}
