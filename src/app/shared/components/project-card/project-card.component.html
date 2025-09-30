@@ -9,7 +9,7 @@
       <p>{{ project().description }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>VER DETALHES</button>
+      <a mat-button [routerLink]="['/portfolio', project().id]">VER DETALHES</a>
     </mat-card-actions>
   </mat-card>
 }

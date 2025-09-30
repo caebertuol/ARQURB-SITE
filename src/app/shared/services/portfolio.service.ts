@@ -5,7 +5,13 @@ import { Project } from '../models/project';
   providedIn: 'root'
 })
 export class PortfolioService {
-  // Usando Signals para gerenciar nossa lista de projetos
+  
+  public getProjectById(id: number) {
+  // Usamos o método .find() do array para encontrar o projeto com o ID correspondente
+  const project = this.projects().find(p => p.id === id);
+  return signal(project); // Retornamos um novo signal com o projeto encontrado (ou undefined)
+}
+
   private projects = signal<Project[]>([
     {
       id: 1,

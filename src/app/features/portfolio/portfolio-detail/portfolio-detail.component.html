@@ -1,0 +1,16 @@
+<div class="container">
+  @if (project()) {
+    <div class="project-detail">
+      <a mat-flat-button routerLink="/portfolio" class="back-button">&larr; Voltar para o Portfólio</a>
+      <h1>{{ project()?.title }}</h1>
+      <p class="subtitle">{{ project()?.category }} - {{ project()?.year }}</p>
+      <img [src]="project()?.coverImage" [alt]="project()?.title" class="cover-image">
+      <div class="description">
+        <p>{{ project()?.description }}</p>
+      </div>
+    </div>
+  } @else {
+    <p>Projeto não encontrado ou carregando...</p>
+    <a mat-flat-button routerLink="/portfolio">&larr; Voltar para o Portfólio</a>
+  }
+</div>
