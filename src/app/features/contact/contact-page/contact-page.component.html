@@ -1,6 +1,6 @@
 <div class="container">
-  <h1>Entre em Contato</h1>
-  <p>Tem uma ideia ou um projeto em mente? Adoraríamos ouvir sobre ele.</p>
+  <h1 class="container-titulo">Entre em Contato</h1>
+  <p>Tem uma ideia ou um projeto em mente? Adoraríamos ouvir você.</p>
 
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
     <mat-form-field appearance="outline">
@@ -38,6 +38,6 @@
       }
     </mat-form-field>
 
-    <button mat-flat-button color="primary" type="submit">Enviar Mensagem</button>
+    <button mat-flat-button class="msg-button" type="submit">Enviar Mensagem</button>
   </form>
 </div>

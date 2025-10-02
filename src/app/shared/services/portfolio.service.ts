@@ -15,26 +15,71 @@ export class PortfolioService {
   private projects = signal<Project[]>([
     {
       id: 1,
-      title: 'Residência no Lago',
-      category: 'Residencial',
-      coverImage: 'https://images.adsttc.com/media/images/6530/2f88/33a4/1601/7506/238b/large_jpg/casa-na-serra-do-guararu-paulo-mendes-da-rocha_8.jpg',
-      description: 'Um projeto moderno com vista para o lago, focado em integração com a natureza.',
-      year: 2024
+      title: 'Expográfico Barra Mansa',
+      category: 'Expografia',
+      coverImage: '',
+      description: 'Galeria, Arte em 3D, Conceito de Arquitetura',
+      year: 2025
     },
     {
       id: 2,
-      title: 'Edifício Corporativo Vértice',
-      category: 'Comercial',
-      coverImage: 'https://www.galeriadaarquitetura.com.br/wp-content/uploads/2022/01/edificio-toto-i-vigliecca-associados-foto-leonardo-finotti-3.jpg',
-      description: 'Design arrojado e sustentável para um centro empresarial de tecnologia.',
+      title: 'Museu Niterói',
+      category: 'Expografia',
+      coverImage: '',
+      description: 'Galeria, Arte em 3D, Conceito de Arquitetura',
       year: 2023
     },
     {
       id: 3,
-      title: 'Praça Central',
+      title: 'Campeonato de Jiu-Jitsu Vila São Braz',
+      category: 'Cenografia',
+      coverImage: '',
+      description: 'Cenografia, 3D, Arquitetura Esportiva',
+      year: 2024
+    },
+
+    {
+      id: 4,
+      title: 'Praça Giramundo',
       category: 'Urbanismo',
-      coverImage: 'https://i.pinimg.com/originals/4e/9d/2c/4e9d2c554e1560f60183181822c67f5b.jpg',
-      description: 'Revitalização da praça central, criando um novo espaço de convivência para a cidade.',
+      coverImage: '',
+      description: 'Urbanismo, Espaço Público, Projeto Paisagístico',
+      year: 2024
+    },
+
+    {
+      id: 5,
+      title: 'Residencial em Estância Velha',
+      category: 'Cenografia',
+      coverImage: '',
+      description: 'Arquitetura Residencial, Design Exterior, Sustentabilidade',
+      year: 2024
+    },
+
+    {
+      id: 6,
+      title: 'Caixa Cultural',
+      category: 'Expografia',
+      coverImage: '',
+      description: 'Arte, Cultura, Espaço Público',
+      year: 2024
+    },
+
+    {
+      id: 7,
+      title: 'CuscoBox - Espaço Pet',
+      category: 'Arquitetura Comercial',
+      coverImage: '',
+      description: 'Arquitetura Comercial, Design de Interiores',
+      year: 2024
+    },
+
+    {
+      id: 8,
+      title: 'Life Treinamento Funcional',
+      category: 'Arquitetura Comercial',
+      coverImage: '',
+      description: 'Design de Interiores, Espaço Fitness, Bem-estar',
       year: 2025
     }
   ]);

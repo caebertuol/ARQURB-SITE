@@ -1,3 +1,35 @@
 .spacer {
   flex: 1 1 auto;
 }
+
+.site-title {
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  margin-right: 1rem;
+}
+
+.register-button {
+  // Adiciona uma borda branca para destacar no fundo primário
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  color: white !important;
+}
+
+mat-toolbar a {
+  color: #333; // Um cinza escuro para boa legibilidade
+}
+
+// Garante que o título do site também tenha a cor escura
+.site-title {
+  color: #333 !important; // !important para garantir a sobreposição
+}
+
+.login-button {
+  color: #ac6868 !important; // Ajusta a cor do botão de login
+  
+}
+// Ajusta a cor do botão de cadastro
+.register-button {
+  border-color: #ac6868 !important; // Cor primária do tema para a borda
+  color: #ac6868 !important;      // Cor primária do tema para o texto
+}

@@ -3,6 +3,14 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     {
+    path: 'login',
+    loadComponent: () => import('./features/auth/login-page/login-page.component').then(m => m.LoginPageComponent)
+  },
+  {
+    path: 'register',
+    loadComponent: () => import('./features/auth/register-page/register-page.component').then(m => m.RegisterPageComponent)
+},
+    {
         path: '',
         loadComponent: () => import('./features/home/home.component').then(m => m.HomeComponent)
     },

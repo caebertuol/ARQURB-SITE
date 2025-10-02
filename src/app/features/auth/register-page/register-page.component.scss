@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 80vh;
+}
+
+mat-card {
+  max-width: 400px; // Deixamos o card mais estreito
+  width: 100%;
+}
+
+mat-card-content {
+  padding: 16px !important; // Diminuímos o padding interno
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; // Diminuímos o espaço entre os campos
+  @include mat.form-field-density(-2); // Deixamos os campos mais compactos
+}
+
+.titulo-cadastro {
+  color: #ac6868; // Cor primária do tema   
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

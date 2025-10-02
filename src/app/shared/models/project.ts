@@ -5,4 +5,5 @@ export interface Project {
   coverImage: string; // URL da imagem de capa
   description: string;
   year: number;
+  
 }
